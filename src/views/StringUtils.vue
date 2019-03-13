@@ -1,21 +1,30 @@
 <template>
-    <div class="string_utils">
-        <h1>This is an String Utilities</h1>
 
-        <div>
+    <div>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        String Case Converter
+                    </h1>
+                    <h2 class="subtitle">
+                    </h2>
+                </div>
+            </div>
+        </section>
 
-            <textarea rows="10" cols="100" v-model="input_strings">
+        <div class="container">
+            <textarea class="textarea is-primary" rows="10" v-model="input_strings">
             </textarea>
-            <button v-on:click="reverse">Reverse</button>
-            <button v-on:click="upprer_case">Upper Case</button>
-            <button v-on:click="lower_case">Lower Case</button>
-            <button v-on:click="sentense_case">Sentense Case</button>
-            <button v-on:click="proper_case">Proper Case</button>
+            <button class="button is-primary is-outlined" v-on:click="upprer_case">Upper Case</button>
+            <button class="button is-info is-outlined" v-on:click="lower_case">Lower Case</button>
+            <button class="button is-success is-outlined" v-on:click="sentense_case">Sentense Case</button>
+            <button class="button is-link is-outlined" v-on:click="proper_case">Proper Case</button>
+            <button class="button is-danger is-outlined" v-on:click="reverse">Reverse</button>
         </div>
 
-
-
     </div>
+
 </template>
 
 <script>
@@ -58,3 +67,15 @@ export default {
 }
 
 </script>
+
+<style scoped>
+
+.button {
+    margin: 5px;
+}
+textarea {
+    margin: 10px;
+}
+
+</style>
+
