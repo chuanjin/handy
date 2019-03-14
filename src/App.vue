@@ -3,8 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/string">String</router-link> |
-      <router-link to="/json">json</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/json">json</router-link>
     </div>
     <router-view/>
   </div>
