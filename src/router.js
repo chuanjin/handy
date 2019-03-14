@@ -25,6 +25,11 @@ export default new Router({
       path: '/string',
       name: 'string',
       component: () => import('./views/StringUtils.vue')
+    },
+    {
+      path: '/json',
+      name: 'json',
+      component: () => import('./views/JsonUtils.vue')
     }
   ]
 })
