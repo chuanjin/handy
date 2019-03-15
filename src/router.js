@@ -22,6 +22,11 @@ export default new Router({
       path: '/json',
       name: 'json',
       component: () => import('./views/JsonUtils.vue')
+    },
+    {
+      path: '/mqttc',
+      name: 'mqttc',
+      component: () => import('./views/MqttUtils.vue')
     }
   ]
 })
