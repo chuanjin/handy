@@ -23,13 +23,21 @@
             <button class="button is-danger is-outlined" v-on:click="reverse">Reverse</button>
         </div>
 
+        <Footer/>
     </div>
 
 </template>
 
 <script>
 
+import Footer from '@/components/Footer.vue'
+
 export default {
+
+    components: {
+        Footer
+    },
+
     data() {
         return {
             input_strings: "Paste or Type your string here."
