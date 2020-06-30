@@ -44,11 +44,21 @@ export default {
 
     methods: {
         pretty: function() {
+          try{
             this.input_strings = JSON.stringify(JSON.parse(this.input_strings), null, 4)
+          }
+          catch(err) {
+            console.log(err)
+          }
         },
 
         minify: function() {
+          try{
             this.input_strings = JSON.stringify(JSON.parse(this.input_strings), null, '')
+          }
+          catch(err) {
+            console.log(err)
+          }
         }
     }
 }
@@ -65,4 +75,3 @@ textarea {
 }
 
 </style>
-

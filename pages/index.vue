@@ -8,9 +8,9 @@
                         This online tools contain a few handy utilities
                     </h1>
                     <h2 class="subtitle">
-                        <router-link to="/string"><u>String Case Converter</u></router-link> | 
-                        <router-link to="/json"><u>Pretty or Minify JSON</u></router-link> |
-                        <router-link to="/mqttc"><u>MQTT client tool</u></router-link>
+                        <router-link to="/StringUtils"><u>String Case Converter</u></router-link> | 
+                        <router-link to="/JsonUtils"><u>Pretty or Minify JSON</u></router-link> |
+                        <router-link to="/MqttUtils"><u>MQTT client tool</u></router-link>
                     </h2>
                 </div>
             </div>
@@ -36,4 +36,3 @@ export default {
 
 }
 </script>
-

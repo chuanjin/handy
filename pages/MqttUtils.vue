@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <section class="hero is-medium is-primary is-bold">
             <div class="hero-body">
                 <div class="container">
@@ -283,12 +282,22 @@
     </div>
 </template>
 
+
 <script>
 
 import MessageList from '@/components/MessageList.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
+
+  head () {
+    return {
+      script: [
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js' }
+      ]
+    }
+  },
+
 
     components: {
         MessageList,
@@ -350,7 +359,12 @@ export default {
             }
             this.client.onConnectionLost = this.onConnectionLost;
             this.client.onMessageArrived = this.onMessageArrived;
-            this.client.connect(options);
+            try{
+              this.client.connect(options);
+            }
+            catch(err){
+              console.log(err)
+            }
         },
 
         subscribe: function() {
@@ -467,5 +481,3 @@ export default {
 }
 
 </script>
-
-
